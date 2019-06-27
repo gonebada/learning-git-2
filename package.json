@@ -1,0 +1,30 @@
+{
+  "name": "learning-git",
+  "version": "1.0.0",
+  "description": "https://gonebada.github.io/learning-git-2/",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html",
+    "test:html": "nu-html-checker *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonebada/learning-git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonebada/learning-git/issues"
+  },
+  "homepage": "https://github.com/gonebada/learning-git#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.7",
+    "nu-html-checker": "^0.1.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.0",
+    "postcss-cli-simple": "^3.0.0"
+  }
+}
