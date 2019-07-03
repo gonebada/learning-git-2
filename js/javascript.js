@@ -59,3 +59,17 @@ button2.addEventListener('click', function () {
         }
     }
 });
+
+
+/*Twoim zadaniem jest wydzielenie fragmentów kodu z poprzedniego zadania i zapisanie ich jako funkcji.
+var temp
+var tempf = function(temp){
+    temp = (temp * 1.8) + 32
+    document.write('Temperature in Farenheit is: ' + temp + '<br>')
+}
+temp = window.prompt('What is the temperature today?')
+
+Funkcja, która przyjmuje temperaturę C i zwraca temperaturę F.
+Funkcja, która przyjmuje temperaturę C i zwraca informację np. o stanie skupienia wody.
+Funkcja, która przyjmuje temperaturę F i zwraca temperaturę C.
+Funkcję, która wyświetla tekst na stronie, odpowiednio dodając nową linię.*/

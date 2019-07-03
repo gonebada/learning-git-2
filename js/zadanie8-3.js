@@ -15,8 +15,8 @@ buttonCelcius.addEventListener('click', function () {
         outputF.innerHTML = 'Temperature in Farenheit is: ' + temperatureInFahrenheit + '<br>' + outputF.innerHTML;
 
         // FUNKCJA PODAJĄCA INFORMACJĘ O POGODZIE I UBIORZE
-        var informacja = informacjaOPogodzie(temperatureInCelcius);
-        outputF.innerHTML = 'Informacja: ' + informacja + '<br>' + outputF.innerHTML;
+        var information = infoAboutWeather(temperatureInCelcius);
+        outputF.innerHTML = 'Informacja: ' + information + '<br>' + outputF.innerHTML;
         // output3.innerHTML - dopisac te wartosc
     } else {
         outputF.innerHTML = 'Wprowadzona wartość jest niepoprawna ' + '<br>' + outputF.innerHTML;
@@ -24,17 +24,21 @@ buttonCelcius.addEventListener('click', function () {
 });
 
 buttonFahrenheit.addEventListener('click', function () {
-        var temperatureInFarenheit = window.prompt('Podaj temperaturę jaką chcesz przeliczyć na Celcjusze');
-        // TEMPERATURE IN CELCIUS ZAWIERA PRZELICZONA WARTOSC WSKAZANEJ PRZEZ UZYTKOWNIKA temperatury
+    var temperatureInFarenheit = window.prompt('Jaka temperature w Farenheit chcialbys przeliczyc');
+
+    if (temperatureInFarenheit !== '' && !isNaN(temperatureInFarenheit)) {
         var temperatureInCelcius = calculateFahrenheitToCelcius(temperatureInFarenheit);
-
+        // TEMPERATURE IN FAHRENHEIT ZAWIERA PRZELICZONA WARTOSC WSKAZANEJ PRZEZ UZYTKOWNIKA temperatury
         outputC.innerHTML = 'Temperature in Celcius is: ' + temperatureInCelcius + '<br>' + outputC.innerHTML;
-        // FUNKCJA PODAJĄCA INFORMACJĘ O POGODZIE I UBIORZE
-        var informacja = informacjaOPogodzie(temperatureInCelcius);
-        outputC.innerHTML = 'Informacja: ' + informacja + '<br>' + outputC.innerHTML;
-    }
 
-)
+        // FUNKCJA PODAJĄCA INFORMACJĘ O POGODZIE I UBIORZE
+        var information = infoAboutWeather(temperatureInCelcius);
+        outputC.innerHTML = 'Informacja: ' + information + '<br>' + outputC.innerHTML;
+        // output3.innerHTML - dopisac te wartosc
+    } else {
+        outputC.innerHTML = 'Wprowadzona wartość jest niepoprawna ' + '<br>' + outputC.innerHTML;
+    }
+});
 /*Funkcja, która przyjmuje temperaturę C i zwraca temperaturę F.*/
 
 var calculateCelciusToFahrenheit = function (tempertaure) {
@@ -49,7 +53,7 @@ var calculateFahrenheitToCelcius = function (tempertaure) {
 }
 
 /*Funkcja, która przyjmuje temperaturę C i zwraca informację np. o stanie skupienia wody.*/
-var informacjaOPogodzie = function (tempertaure) {
+var infoAboutWeather = function (tempertaure) {
     if (tempertaure < 0) {
         /* output3.innerHTML ='Woda zamarza'+'<br>'+output3.innerHTML;*/
         return 'Woda zamarza, lepiej ubierz kurtke';
